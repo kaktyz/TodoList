@@ -1,16 +1,16 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 import TodoItem from "./TodoItem.js";
+import todosData from "./todosData.js";
 
 function App() {
+  
+  const list = todosData.map(product => <TodoItem key={product.id} text={product.text} />);
+
+  
   return (
     <div className="App">
-      
-      <TodoItem />
-      <TodoItem />
-      <TodoItem />
-
+      {list}
     </div>
   );
 }

@@ -1,19 +1,13 @@
 import React from "react";
 import "./TodoItemCSS.css";
 
-function TodoItem() {
 
-    // return(
-    //     <div>
-    //         <input type="checkbox" />
-    //         <p>Text</p>
-    //     </div>
-    // )
+function TodoItem(props) {
 
     return(
         <label>
             <input type="checkbox" className="option-input checkbox"  />
-            <span>Text</span>
+            <span>{props.text}</span>
         </label>
     )
 
