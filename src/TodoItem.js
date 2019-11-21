@@ -6,8 +6,8 @@ function TodoItem(props) {
 
     return(
         <label>
-            <input type="checkbox" className="option-input checkbox"  />
-            <span>{props.text}</span>
+            <input type="checkbox" className="option-input checkbox" onChange={()=>{console.log("123")}} />
+            <span>{props.item.text}</span>
         </label>
     )
 
