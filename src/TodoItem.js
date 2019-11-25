@@ -1,15 +1,30 @@
 import React from "react";
-import "./TodoItemCSS.css";
+import "./TodoItemCSS.css"; 
 
 
-function TodoItem(props) {
+class TodoItem extends React.Component{
 
-    return(
-        <label>
-            <input type="checkbox" className="option-input checkbox" onChange={()=>{console.log("123")}} />
-            <span>{props.item.text}</span>
-        </label>
-    )
+    render(){
+        
+        return(
+
+            <label>
+
+                <input 
+                
+                    type="checkbox" 
+                    className="option-input checkbox" 
+                    onChange={()=>this.props.handelChange(this.props.item.id)} 
+                    
+                />
+                
+                <span>{this.props.item.text}</span>
+
+            </label>
+
+        )
+        
+    }
 
 }
 
